@@ -1,10 +1,9 @@
-import NewButton from "./components/NewButton";
-import FilterableProductTable from "./components/FilterableProductTable";
+import BookManage from "./components/book_manage/BookManage";
 
 function App() {
   return (
     <div>
-      <FilterableProductTable></FilterableProductTable>
+      <BookManage></BookManage>
     </div>
   );
 }
