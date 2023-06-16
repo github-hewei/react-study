@@ -92,8 +92,8 @@ function ProductTable({
   let lastCategory: string = "";
   let rows: ReactNode[] = [];
 
-  console.log("filterText", filterText);
-  console.log("inStockOnly", inStockOnly);
+  // console.log("filterText", filterText);
+  // console.log("inStockOnly", inStockOnly);
 
   products.forEach((item, index) => {
     if (item.category != lastCategory) {
@@ -104,6 +104,14 @@ function ProductTable({
           category={lastCategory}
         ></ProductCategoryRow>
       );
+    }
+
+    if (inStockOnly && item.stocked) {
+      return;
+    }
+
+    if (filterText !== "" && !item.name.includes(filterText)) {
+      return;
     }
 
     rows.push(<ProductRow key={index} product={item}></ProductRow>);
