@@ -1,4 +1,4 @@
-import BookManage from "./components/book_manage/BookManage";
+import BookManage from "./components/book_manage_bp/BookManage";
 
 function App() {
   return (
